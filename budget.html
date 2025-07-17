@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="budget.css"/>
+</head>
+<body>
+    <h1>Budget track</h1>
+    <form id="enterForm">
+       <input type="text" id="description" placeholder="Description"  />
+       <input type="number" id="amount" placeholder="Amount" min="0"/>
+       <select id="type">
+          <option value="" disabled hidden selected>Income/Expense</option>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+       </select>
+       <button type="submit">Add</button>
+    </form>
+    <div id="summary">
+        <p>Balance:<span id="balance">0</span></p>
+        <p>Total Income: <span id="totalincome">0</span></p>
+        <p>Total Expenses: <span id="totalexpense">0</span></p>
+    </div>
+    <ul id="transactions"></ul>
+    <script src="budget.js"></script>
+</body>
+</html>
